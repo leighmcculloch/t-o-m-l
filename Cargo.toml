@@ -1,0 +1,25 @@
+[package]
+name = "t-o-m-l"
+version = "0.1.0"
+edition = "2021"
+description = "TOML file CLI editor."
+homepage = "https://github.com/leighmcculloch/t-o-m-l"
+repository = "https://github.com/leighmcculloch/t-o-m-l"
+authors = ["Leigh McCulloch"]
+license = "Apache-2.0 or MIT"
+rust-version = "1.65"
+
+[[bin]]
+name = "toml"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.0.22", features = ["derive"] }
+toml_edit = "0.15.0"
+
+[build_dependencies]
+crate-git-revision = "0.0.2"
+
+[dev_dependencies]
+assert_cmd = "2.0.4"
+assert_fs = "1.0.7"
